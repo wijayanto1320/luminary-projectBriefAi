@@ -1,8 +1,13 @@
-import { Brief } from "./_components/briefs";
-import { getProjectBriefWithDetailsById } from "./actionGetBrief";
 
-export default async function BorkmarkPage() {
-  const projectBriefs = await getProjectBriefWithDetailsById();
+import GetBrief from "./components/getBrief";
 
-  return <Brief projectBriefs={projectBriefs} />;
+
+const BookmarkPage = () => {
+
+  return (
+    <GetBrief/>
+  );
+
 }
+
+export default BookmarkPage;

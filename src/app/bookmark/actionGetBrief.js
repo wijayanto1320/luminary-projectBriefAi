@@ -1,5 +1,3 @@
-"use server"
-
 import { auth } from '@/libs/auth';
 
 const { PrismaClient } = require('@prisma/client');
@@ -7,7 +5,6 @@ const prisma = new PrismaClient();
 
 export async function getProjectBriefWithDetailsById() {
   try {
-    console.log("start");
     const id = auth().id;
     console.log(`user id is in ${id}`);
 	const projectBrief = await prisma.projectBrief.findMany({
@@ -20,7 +17,6 @@ export async function getProjectBriefWithDetailsById() {
 		userStories: true, // Assuming `userStories` is the relation field name in ProjectBrief model
 	  },
 	});
-
 	console.log(projectBrief);
 	return projectBrief;
   } catch (error) {
