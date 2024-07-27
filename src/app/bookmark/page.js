@@ -7,6 +7,7 @@ const BookmarkPage = () => {
   return (
     <GetBrief/>
   );
+
 }
 
 export default BookmarkPage;

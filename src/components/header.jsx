@@ -1,3 +1,4 @@
+
 /* eslint-disable @next/next/no-img-element */
 import LogoutButton from "./logout";
 import { findUser } from "@/libs/findUser";
@@ -66,5 +67,6 @@ export const Header = async() => {
         </div>
       </div>
     </div>
+
   );
 };
